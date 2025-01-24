@@ -17,6 +17,7 @@
       link.rel = 'stylesheet';
       link.href = stylesheet;
       document.head.appendChild(link);
+      document.getElementById('stylesheet').textContent = stylesheet;
     }
 
     window.onload = loadStylesheet;
@@ -40,6 +41,7 @@
   </header>
   <main>
     <h1>Styled Elements</h1>
+    <p>Stylesheet: <span id="stylesheet">Stylesheet</span></p>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
@@ -187,7 +189,7 @@
           dolore magna aliqua.</p>
       </div>
       <div class="sidebar">
-        <h2>Second column</h2>
+        <h2>Sidebar</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
           dolore magna aliqua.</p>
       </div>

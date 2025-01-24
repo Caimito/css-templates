@@ -7,39 +7,30 @@
 }
 
 .symbol-wrapper {
-  background-color: white;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center; 
 }
 
-.symbol-wrapper svg {
-  fill: green;
-}
-
 .advice {
-  background-color: var(--advice-background-color);
-  padding: 20px;
-  margin: 20px 0;
+  padding: 1rem;
+  margin: 1rem 0;
   border-radius: 1rem;
 }
 
 .upsell {
-  background-color: var(--upsell-background-color);
-  padding: 20px;
-  margin: 20px 0;
+  padding: 1rem;
+  margin: 1rem 0;
   border-radius: 1rem;
 }
 
 .error {
-  background-color: var(--error-background-color);
-  color: var(--error-text-color);
-  padding: 20px;
-  margin: 20px 0;
+  padding: 1rem;
+  margin: 1rem 0;
   border-radius: 1rem;
 }
 
@@ -48,8 +39,6 @@
 }
 
 .content-box {
-  background-color: var(--content-box-background-color);
-  color: var(--content-box-color);
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 1rem;
@@ -64,7 +53,6 @@
 }
 
 .content-box.with-inset > div {
-  background-color: var(--content-box-inset-background-color);
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -77,8 +65,10 @@
 }
 
 .sidebar {
-  background-color: #f4f4f4; /* Light gray background */
-  border: 1px solid #e0e0e0; /* Subtle border */
   padding: 2rem;
   border-radius: 1rem;
+}
+
+.two-columns > h2, .sidebar > h2 {
+  margin-top: 0;
 }

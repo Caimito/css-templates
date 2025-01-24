@@ -2,8 +2,6 @@ nav {
   display: flex;
   gap: 2rem;
   height: 3rem;
-  background-color: white;
-  color: var(--color-primary);
   width: 100%; 
   z-index: 1000;
   overflow-x: hidden;
@@ -17,7 +15,6 @@ nav > .filler {
 nav > a {
   text-decoration: none;
   font-weight: bold;
-  color: black;
   transition: color 0.3s, border-bottom 0.3s;
   padding: 5px;
   border-bottom: 2px solid transparent;
@@ -25,10 +22,6 @@ nav > a {
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-}
-
-nav > a:not(:has(img)):hover {
-  border-bottom: 2px solid var(--button-secondary-hover-bg);
 }
 
 nav a img {
@@ -47,8 +40,6 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #111827;
-  color: silver;
   width: 100%;
   max-width: 100%;
   gap: 6rem;
@@ -58,12 +49,12 @@ footer {
   box-sizing: border-box;
 }
 
-footer > div {
-  width: calc(100% / 4);
+footer a {
+  text-decoration: none;
 }
 
-footer h3 {
-  color: white;
+footer > div {
+  width: calc(100% / 4);
 }
 
 footer ul {
@@ -73,9 +64,4 @@ footer ul {
 
 footer ul li {
   padding-bottom: 0.5rem;
-}
-
-p img {
-  height: 3rem;
-  vertical-align: middle; 
 }
