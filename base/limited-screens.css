@@ -1,0 +1,56 @@
+/* Mobile phones (portrait and landscape) */
+@media (max-width: 600px) {
+  header {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav {
+    justify-content: space-evenly;
+  }
+
+  .nav-symbol {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+  
+  .nav-image, .nav-text {
+    display: none;
+  }
+
+  main {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0 !important;
+    margin-bottom: calc(var(--header-height) + 1rem);
+  } 
+
+  h1 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .two-columns {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+  
+/* Tablets (portrait) */
+@media (min-width: 601px) and (max-width: 768px) {
+  /* Styles for tablets in portrait mode */
+}
+
+/* Tablets (landscape) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for tablets in landscape mode */
+}

@@ -1,6 +1,7 @@
 @import "../../base/layout.css";
 @import "../../base/classes.css";
 @import "../../base/nav.css";
+@import "../../base/limited-screens.css";
 
 .material-symbols-outlined {
   font-variation-settings:
