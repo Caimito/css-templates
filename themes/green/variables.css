@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #4E8424;
+  --body-background-color: #E3E3E3;
+
+  --advice-background-color: #FFC67D;
+  --upsell-background-color: #c8fdaf;
+
+  --error-background-color: #FFE5E5;
+  --error-text-color: #CC0000;
+
+  --button-primary-background-color: #58A821;
+  --button-primary-color: white;
+  --feature-background-color: #ecfad8;
+
+  /* navbar */
+  --header-height: 3rem;
+
+  /* content box */
+  --content-box-background-color: white;
+  --content-box-color: black;
+  --content-box-inset-background-color: #f0f0f0;
+}

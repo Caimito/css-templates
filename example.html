@@ -1,23 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Templates Test</title>
-    <link rel="stylesheet" href="main.css">
+  <title>Styled Elements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta charset="UTF-8">
+  <script>
+    function getQueryParam (param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function loadStylesheet () {
+      const stylesheet = getQueryParam('stylesheet') || 'themes/caimito/main.css';
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = stylesheet;
+      document.head.appendChild(link);
+    }
+
+    window.onload = loadStylesheet;
+  </script>
+  <style>
+    section {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Styled Page</h1>
-    </header>
-    
-    <section>
-        <p>This is a simple page using the CSS template.</p>
-        <button class="btn-primary">Click Me</button>
+  <header>
+    <nav>
+      <a href="#"><img src="https://www.caimito.net/img/CaimitoAgileLifeSL.png" /></a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Styled Elements</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+    </p>
+
+    <h2>Second level</h2>
+    <h3>Third level</h3>
+    <h4>Forth level</h4>
+    <h5>Fifth level</h5>
+    <h6>Sixth level</h6>
+
+    <h1>Alert Boxes</h1>
+
+    <section class="advice">
+      <h2>Advice</h2>
+      <p>An alert box</p>
     </section>
 
-    <footer>
-        <p>&copy; 2025 My Website</p>
-    </footer>
+    <div class="upsell">
+      <h2>Upsell</h2>
+      <p>A upsell box</p>
+    </div>
+
+    <div class="error">
+      <h2>Error</h2>
+      <p>An error box</p>
+    </div>
+
+    <h1>Buttons and links as buttons</h1>
+
+    <a href="#" class="button">A link as button</a>
+    <button>An actual button</button>
+
+    <a href="#" class="button" aria-disabled="true">A link as button</a>
+    <button aria-disabled="true">An actual button</button>
+
+    <h1>Content boxes</h1>
+    <section>
+      <div class="content-box">
+        <h2>Regular Box</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.</p>
+      </div>
+
+      <div class="content-box with-inset">
+        <div>
+          <h2>Box with inset</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.</p>
+        </div>
+      </div>
+    </section>
+
+    <h1>Symbols</h1>
+    <p>Here are some symbols: &copy; &reg; &trade; &times; &divide;</p>
+    <p>A wrapped SVG symbol:</p>
+    <div class="symbol-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+        <path
+          d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+      </svg>
+    </div>
+
+    <h1>Input forms</h1>
+    <h2>Simple form</h2>
+    <form style="width: 90%">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Form with fieldset</h2>
+
+    <form style="width: 90%">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Physical Information</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="height">Height</label>
+            <div class="input-group">
+              <input type="number" name="heightInCm" required>
+              <span class="unit">cm</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="weight">Weight</label>
+            <div class="input-group">
+              <input type="number" name="weightInKg" required>
+              <span class="unit">kg</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
+
+    <h1>Two columns</h1>
+    <div class="two-columns">
+      <div>
+        <h2>First column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</p>
+      </div>
+      <div>
+        <h2>Second column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</p>
+      </div>
+    </div>
+
+    <h1>Sidebar</h1>
+    <div class="two-columns">
+      <div>
+        <h2>First column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</p>
+      </div>
+      <div class="sidebar">
+        <h2>Second column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <h2>About</h2>
+      <ul>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Social Media</h2>
+      <ul>
+        <li><a href="#">Media 1</a></li>
+        <li><a href="#">Media 2</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
+
 </html>

@@ -1,0 +1,84 @@
+[aria-disabled="true"] {
+  pointer-events: none !important;
+  cursor: not-allowed !important;
+  color: gray !important;
+  text-decoration: none !important;
+  opacity: 0.6 !important;
+}
+
+.symbol-wrapper {
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+.symbol-wrapper svg {
+  fill: green;
+}
+
+.advice {
+  background-color: var(--advice-background-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 1rem;
+}
+
+.upsell {
+  background-color: var(--upsell-background-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 1rem;
+}
+
+.error {
+  background-color: var(--error-background-color);
+  color: var(--error-text-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 1rem;
+}
+
+.advice h2, .upsell h2, .error h2 {
+  margin-top: 0;
+}
+
+.content-box {
+  background-color: var(--content-box-background-color);
+  color: var(--content-box-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+
+.content-box h2 {
+  margin-top: 0;
+}
+
+.content-box.with-inset {
+  padding: 0.5rem;  
+}
+
+.content-box.with-inset > div {
+  background-color: var(--content-box-inset-background-color);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.two-columns {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+.sidebar {
+  background-color: #f4f4f4; /* Light gray background */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  padding: 2rem;
+  border-radius: 1rem;
+}
